@@ -6,6 +6,9 @@ class BirdsController < ApplicationController
   
   def show 
     bird = Bird.find_by(id: params[:id])
+    if bird 
     render json: bird.slice(:id, :name, :species)
-  end 
+  else 
+    render json: {message: 'Bird not found' } 
+  end  
 end
