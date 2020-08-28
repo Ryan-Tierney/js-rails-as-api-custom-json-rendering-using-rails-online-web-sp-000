@@ -1,7 +1,7 @@
 class BirdsController < ApplicationController
   def index
     birds = Bird.all
-    render json: {id: bird.id, name: bird.name, species: bird.species}
+    render json: {id: birds.id, name: birds.name, species: birds.species}
   end
   
   def show 
