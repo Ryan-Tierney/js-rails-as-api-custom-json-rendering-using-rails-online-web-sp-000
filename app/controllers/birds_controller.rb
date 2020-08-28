@@ -1,7 +1,7 @@
 class BirdsController < ApplicationController
   def index
     birds = Bird.all
-    render json: bird.slice(:id, :name, :species)
+    render json: birds
   end
   
   def show 
