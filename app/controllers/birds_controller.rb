@@ -5,7 +5,7 @@ class BirdsController < ApplicationController
   end
   
   def show 
-    bird = Bird.findy_by_(id: params[:id])
+    bird = Bird.findy_by(id: params[:id])
     render json: bird 
   end 
 end
